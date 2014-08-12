@@ -84,6 +84,7 @@
     <Compile Include="matching_core\ValueMatchCreationExtensionPoint.cs" />
     <Compile Include="ranges\IContainValues.cs" />
     <Compile Include="ranges\Range.cs" />
+    <Compile Include="sorting\Sort.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

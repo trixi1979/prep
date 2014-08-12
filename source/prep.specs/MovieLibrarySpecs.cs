@@ -9,6 +9,7 @@ using prep.extensions;
 using prep.matching;
 using prep.matching_core;
 using prep.ranges;
+using prep.sorting;
 using prep.specs.utility;
 
 /* The following set of Context/Specification pairs are in place to specify the functionality that you need to complete for the MovieLibrary class.
@@ -338,6 +339,9 @@ namespace prep.specs
         //Dreamworks
         //Universal
         //Disney
+          var comparer =
+              Sort<Movie>.@by(x => x.production_studio, new List<ProductionStudio>(), SortOrders.@ascending)
+                  .then_by(x => x.date_published);
         var results = sut.sort_all_movies_by_movie_studio_and_year_published();
         /* should return a set of results 
                  * in the collection sorted by the rating of the production studio (not the movie rating) and year published. for this exercise you need to take the studio ratings
