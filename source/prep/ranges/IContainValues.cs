@@ -6,5 +6,4 @@ namespace prep.ranges
   {
     bool contains(T value);
   }
-
 }

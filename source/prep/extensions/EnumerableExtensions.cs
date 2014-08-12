@@ -22,6 +22,13 @@ namespace prep.extensions
       }
     }
 
+    public static IEnumerable<T> sort<T>(this IEnumerable<T> items, IComparer<T> comparer)
+    {
+      var sorted = new List<T>(items);
+      sorted.Sort(comparer);
+      return sorted;
+    }
+
     public static IEnumerable<T> filter<T>(this IEnumerable<T> items, IMatchA<T> specification)
     {
       return items.filter(specification.matches);

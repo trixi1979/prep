@@ -1,5 +1,4 @@
 ﻿using System;
-using prep.collections;
 using prep.matching;
 using prep.matching_core;
 
@@ -60,7 +59,8 @@ namespace prep.ranges
     }
   }
 
-  public class EndAtContain<AttributeType> : IContainValues<AttributeType> where AttributeType : IComparable<AttributeType>
+  public class EndAtContain<AttributeType> : IContainValues<AttributeType>
+    where AttributeType : IComparable<AttributeType>
   {
     readonly IContainValues<AttributeType> containValue;
     IMatchA<AttributeType> matcher;
